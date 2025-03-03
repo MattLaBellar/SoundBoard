@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    overflow: hidden;
+    background: url('DJ.png') no-repeat center center fixed; 
+    background-size: cover; /* Ensures the image covers the entire screen */
+}
+
+#container {
+    width: 100%;
+    height: 50vh; /* Bottom half of the screen */
+    background-color: #222; /* Darker grey for a sleeker look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.7); /* Deeper shadow */
+}
+
+h1 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #0ff; /* Neon cyan */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+    margin-bottom: 20px;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Wrapper for the CD and text */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Button (CD) Styling */
+.btn {
+    width: 120px;
+    height: 120px;
+    background: url('CD.webp') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+/* Spinning animation (added dynamically in JS) */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Sound Name Text Below the CD */
+.btn-text {
+    font-family: 'Audiowide', sans-serif;
+    color: #ff0; /* Neon yellow */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #ff0, 0 0 15px #f90;
+    text-align: center;
+}
+
+/* Hover Effect */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Button Focus (Remove outline) */
+.btn:focus {
+    outline: none;
+}
